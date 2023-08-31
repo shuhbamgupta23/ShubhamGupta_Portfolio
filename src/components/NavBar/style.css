@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
 }
-i{
+i {
   color: black;
 }
 
@@ -68,7 +68,7 @@ ul {
   display: none;
 }
 
-.nav_right  li a {
+.nav_right li a {
   text-decoration: none;
   color: #504f4f;
   font-weight: 700;
@@ -100,12 +100,11 @@ ul {
   transform: scale(100%);
 }
 
-.nav_right li a{
+.nav_right li a {
   letter-spacing: 1px;
 }
 
-
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .small_screen {
     box-shadow: 0.25px 0.25px 5px 0.5px #c1bfbf;
   }
@@ -130,11 +129,11 @@ ul {
     padding: 3vw 3vw;
     width: 100%;
     text-transform: uppercase;
-    color:white
+    color: white;
   }
 
-  .small_screen li a{
-    color:white;
+  .small_screen li a {
+    color: white;
     font-size: 1rem;
     text-decoration: none;
   }

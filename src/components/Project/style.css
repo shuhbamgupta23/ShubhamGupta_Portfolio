@@ -81,7 +81,7 @@ img {
   text-transform: uppercase;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   .project {
     flex-direction: column;
   }
