@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
 }
+i{
+  color: black;
+}
 
 .nav_main {
   position: sticky;
@@ -34,7 +37,7 @@ nav {
   color: #504f4f;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
 }
 
 .nav_left a:hover {
@@ -65,14 +68,14 @@ ul {
   display: none;
 }
 
-ul li a {
+.nav_right  li a {
   text-decoration: none;
   color: #504f4f;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-li a:hover {
+.nav_right ul li a:hover {
   color: black;
 }
 
@@ -98,11 +101,11 @@ li a:hover {
 }
 
 .nav_right li a{
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .small_screen {
     box-shadow: 0.25px 0.25px 5px 0.5px #c1bfbf;
   }
@@ -118,14 +121,22 @@ li a:hover {
   }
 
   .small_screen.active {
-    background-color: white;
+    background-color: #7843e9;
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     gap: 1.5rem;
     padding: 3vw 3vw;
     width: 100%;
+    text-transform: uppercase;
+    color:white
+  }
+
+  .small_screen li a{
+    color:white;
+    font-size: 1rem;
+    text-decoration: none;
   }
 
   .hamburger.active {
