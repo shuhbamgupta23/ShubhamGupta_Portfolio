@@ -35,7 +35,7 @@ const Main = () => {
         </p>
         <motion.button
           drag
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.05, y: "-5px"}}
           dragConstraints={{
             right: 10,
             left: 10,
@@ -45,10 +45,11 @@ const Main = () => {
           initial={{ y: -1500 }}
           animate={{ y: 0 }}
           transition={{ type: "spring", duration: 1 }}
+          
         >
           <a href="/">Projects</a>
         </motion.button>
-        
+
       </main>
     </div>
   );

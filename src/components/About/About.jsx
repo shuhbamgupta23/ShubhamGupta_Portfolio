@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { motion } from "framer-motion";
 const About = () => {
   return (
     <div className="about">
@@ -27,7 +28,12 @@ const About = () => {
             experience then don't hesitate to <span>contact</span>
             me.
           </p>
-          <button>Contact</button>
+          <motion.button
+            whileHover={{ scale: 1.05, y: "-5px" }}
+            transition={{ duration: 1 }}
+          >
+            Contact
+          </motion.button>
         </div>
         <div className="about-right">
           <h2>My Skills</h2>

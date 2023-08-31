@@ -9,6 +9,7 @@
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 1;
 }
 
 img {
@@ -33,6 +34,7 @@ nav {
   color: #504f4f;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .nav_left a:hover {
@@ -94,6 +96,11 @@ li a:hover {
 .nav_right li:hover:after {
   transform: scale(100%);
 }
+
+.nav_right li a{
+  letter-spacing: 1.5px;
+}
+
 
 @media (max-width: 600px) {
   .small_screen {

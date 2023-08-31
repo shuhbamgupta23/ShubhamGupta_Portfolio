@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import Profile from "../../images/profile_pic.png";
 import "./style.css";
 import { motion } from "framer-motion";
+import resume from "./resume.pdf";
+
 const NavBar = () => {
   const [active, setActive] = useState(false);
   const small_screen = useRef(null);
@@ -45,6 +47,7 @@ const NavBar = () => {
           >
             <a href="/home">Home</a>
           </motion.li>
+
           <motion.li
             initial={{ y: -500 }}
             animate={{ y: 0 }}
@@ -69,6 +72,16 @@ const NavBar = () => {
           >
             <a href="/home">Contact</a>
           </motion.li>
+          <motion.li
+            initial={{ y: -500 }}
+            animate={{ y: 0 }}
+            transition={{ type: "spring", duration: 1 }}
+            whileHover={{ scale: 1.1 }}
+          >
+            <a href={resume} download="ShubhamGupta_Resume">
+              Download Resume
+            </a>
+          </motion.li>
           <div className="icons">
             <i
               class="material-icons hamburger active"
@@ -85,7 +98,7 @@ const NavBar = () => {
           </div>
         </ul>
       </nav>
-      <ul className="small_screen" ref={small_screen} >
+      <ul className="small_screen" ref={small_screen}>
         <li>
           <a href="/home">Home</a>
         </li>
@@ -97,6 +110,11 @@ const NavBar = () => {
         </li>
         <li>
           <a href="/home">Contact</a>
+        </li>
+        <li>
+          <a href={resume} download="ShubhamGupta_Resume">
+            Download Resume
+          </a>
         </li>
       </ul>
     </div>
