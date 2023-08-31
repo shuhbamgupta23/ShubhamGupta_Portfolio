@@ -1,0 +1,108 @@
+img {
+  max-width: 100%;
+}
+
+.projects {
+  margin: 6rem 0;
+}
+
+.project-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.project-header h1 {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.project-header span {
+  width: 2rem;
+  height: 0.45rem;
+  background-color: #7843e9;
+  border-radius: 900px;
+}
+
+.project-header p {
+  padding: 0 12vw;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.project img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.project-bottom {
+  margin: 4rem 5rem;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+  gap: 2rem;
+}
+
+.project-detail {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 2vw;
+}
+
+.project-detail h1 {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.project-detail p {
+  line-height: 1.6;
+}
+
+.project-detail a button {
+  background-color: #7843e9;
+  border: none;
+  padding: 2vh 4vw;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project-detail a button {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .project {
+    flex-direction: column;
+  }
+  .project img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .project-detail {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-detail h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .project-detail p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
