@@ -131,7 +131,7 @@ ul {
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end ;
     gap: 1.5rem;
     padding: 3vw 3vw;
     width: 100%;
@@ -213,6 +213,7 @@ ul {
   flex-direction: column;
   gap: 2rem;
   width: 45%;
+  
 }
 .about-right {
   width: 45%;
@@ -245,7 +246,6 @@ ul {
 }
 
 .about-left button {
-  width: 30%;
   background-color: #7843e9;
   border: none;
   padding: 2vh 4vw;
@@ -428,7 +428,6 @@ img {
   .about-bottom {
     flex-direction: column;
     padding: 0;
-    text-align: center;
     text-align: left;
     align-items: center;
     gap: 2rem;
@@ -644,7 +643,6 @@ footer p a {
   .about-bottom {
     flex-direction: column;
     padding: 0;
-    text-align: center;
     text-align: left;
     gap: 2rem;
     align-items: center;

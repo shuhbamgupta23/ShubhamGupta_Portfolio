@@ -263,13 +263,15 @@ const NavBar = () => {
               and experience then don't hesitate to <span>contact</span>
               me.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05, y: "-5px" }}
-              transition={{ duration: 1 }}
-              onClick={() => buttonScroll(contact)}
-            >
-              Contact
-            </motion.button>
+            <div>
+              <motion.button
+                whileHover={{ scale: 1.05, y: "-5px" }}
+                transition={{ duration: 1 }}
+                onClick={() => buttonScroll(contact)}
+              >
+                Contact
+              </motion.button>
+            </div>
           </div>
           <div className="about-right">
             <h2>My Skills</h2>
