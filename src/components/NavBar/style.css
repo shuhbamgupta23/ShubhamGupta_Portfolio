@@ -96,7 +96,7 @@ ul {
   height: 0.15em;
   background-color: black;
   position: absolute;
-  bottom: 0;
+  bottom: -3px;
   left: 0;
   transform: scaleX(0);
   transition: transform 0.2s ease-in;
