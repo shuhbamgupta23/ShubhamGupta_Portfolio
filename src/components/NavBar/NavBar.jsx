@@ -9,6 +9,7 @@ import RESUME from "../../images/resumepicc.jpeg";
 import EXCEL from "../../images/excel.jpeg";
 import ECOMMERCE from "../../images/ecommerce.jpeg";
 import emailjs from "@emailjs/browser";
+import { useAlert } from "react-alert";
 const NavBar = () => {
   const [active, setActive] = useState(false);
   const [inputValue, setInputValue] = useState({
@@ -16,7 +17,7 @@ const NavBar = () => {
     user_email: "",
     message: "",
   });
-
+  const alert = useAlert();
   const handleChange = (e) => {
     setInputValue({ ...inputValue, [e.target.name]: e.target.value });
   };
@@ -32,6 +33,7 @@ const NavBar = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     setInputValue({ user_name: "", user_email: "", message: "" });
+
     emailjs
       .sendForm(
         "service_8bt4qb9",
@@ -47,6 +49,7 @@ const NavBar = () => {
           console.log(error.text);
         }
       );
+    alert.success("Email sent successfully!", { position: "top center" });
   };
 
   const smallMenuScroll = (currEle) => {
@@ -249,9 +252,9 @@ const NavBar = () => {
           <div className="about-left">
             <h2>Get to know me!</h2>
             <p>
-              I'm a <span>Full Stack Web Developer</span> building the Front-end
-              of Websites and Web Applications that leads to the success of the
-              overall product. Check out some of my work in the
+              I'm a <span>Full Stack Web Developer</span> building the fully
+              functional Websites and Web Applications that leads to the success
+              of the overall product. Check out some of my work in the
               <span>Projects</span> section.
             </p>
             <p>
@@ -302,10 +305,9 @@ const NavBar = () => {
             <div className="project-detail">
               <h1>Movies Application</h1>
               <p>
-                Movies application is a application built using React which
-                fetch movies detail using REST api. Allowing user to add their
-                favorite movies. All the bookmarked movies are stored in
-                local-storage making it reusable even after closing the tab.
+                The "Movies" app in React fetches movie details from a REST API,
+                allowing users to save favorites in local storage for persistent
+                access. This enhances user convenience.
               </p>
               <motion.a
                 whileHover={{ scale: 1.05 }}
@@ -322,10 +324,9 @@ const NavBar = () => {
             <div className="project-detail">
               <h1>Resume Builder</h1>
               <p>
-                Movies application is a application built using React which
-                fetch movies detail using REST api. Allowing user to add their
-                favorite movies. All the bookmarked movies are stored in
-                local-storage making it reusable even after closing the tab.
+                The "Resume Builder" app lets users pick templates, input
+                education, skills, and more, then download personalized resumes
+                in PDF format.
               </p>
               <motion.a
                 whileHover={{ scale: 1.05 }}
@@ -342,10 +343,9 @@ const NavBar = () => {
             <div className="project-detail">
               <h1>Ecommerce</h1>
               <p>
-                Movies application is a application built using React which
-                fetch movies detail using REST api. Allowing user to add their
-                favorite movies. All the bookmarked movies are stored in
-                local-storage making it reusable even after closing the tab.
+                A fully functional e-commerce clone with admin product addition,
+                simplified sales analytics dashboard, and Stripe integration for
+                a real shopping experience.
               </p>
               <motion.a
                 whileHover={{ scale: 1.05 }}
@@ -362,10 +362,9 @@ const NavBar = () => {
             <div className="project-detail">
               <h1>Excel Clone</h1>
               <p>
-                Movies application is a application built using React which
-                fetch movies detail using REST api. Allowing user to add their
-                favorite movies. All the bookmarked movies are stored in
-                local-storage making it reusable even after closing the tab.
+                Implemented a functional Excel clone using Data Structure, HTML,
+                CSS, and JavaScript, added basic Excel functions, and ensured
+                bug-free experience.
               </p>
               <motion.a
                 whileHover={{ scale: 1.05 }}
@@ -394,6 +393,7 @@ const NavBar = () => {
             <input
               onChange={(e) => handleChange(e)}
               type="text"
+              required
               name="user_name"
               placeholder="Enter Your Name"
               value={inputValue.user_name}
@@ -402,12 +402,14 @@ const NavBar = () => {
             <input
               onChange={(e) => handleChange(e)}
               type="email"
+              required
               name="user_email"
               placeholder="Enter Your Email"
               value={inputValue.user_email}
             />
             <label>Message</label>
             <textarea
+              required
               onChange={(e) => handleChange(e)}
               name="message"
               placeholder="Enter Your Message"
