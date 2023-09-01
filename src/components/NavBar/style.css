@@ -256,84 +256,6 @@ ul {
   text-transform: uppercase;
 }
 
-@media (max-width: 900px) {
-  .about-left button {
-    width: 50%;
-    background-color: #7843e9;
-    border: none;
-    padding: 2vh 4vw;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .about-left {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 80%;
-  }
-  .about-right {
-    width: 80%;
-  }
-  .about {
-    padding: 6rem 0;
-    background-color: #fafafa;
-  }
-  .about-bottom {
-    flex-direction: column;
-    padding: 0;
-    text-align: center;
-    text-align: left;
-    gap: 2rem;
-    align-items: center;
-  }
-  .about-right span {
-    padding: 0.25rem 0.5rem;
-    background: rgba(153, 153, 153, 0.2);
-    color: #666;
-    border-radius: 5px;
-    font-weight: 600;
-  }
-}
-
-@media (max-width: 600px) {
-  .about-left button {
-    width: 50%;
-    background-color: #7843e9;
-    border: none;
-    padding: 2vh 4vw;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .about {
-    padding: 6rem 0;
-    background-color: #fafafa;
-  }
-  .about-bottom {
-    flex-direction: column;
-    padding: 0;
-    text-align: center;
-    text-align: left;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .about-left {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 80%;
-  }
-  .about-right {
-    width: 80%;
-  }
-}
-
 img {
   max-width: 100%;
 }
@@ -416,33 +338,6 @@ img {
   font-weight: 700;
   text-transform: uppercase;
 }
-
-@media (max-width: 760px) {
-  .project {
-    flex-direction: column;
-  }
-  .project img {
-    width: 100%;
-    object-fit: cover;
-  }
-  .project-detail {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .project-detail h1 {
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .project-detail p {
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-}
-
 .main {
   font-family: "Source Sans Pro", sans-serif;
   width: 100vw;
@@ -515,15 +410,66 @@ img {
 }
 
 @media (max-width: 760px) {
-  .socials {
-    display: none;
+  .about-left button {
+    width: 50%;
+    background-color: #7843e9;
+    border: none;
+    padding: 2vh 4vw;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
   }
-}
+  .about {
+    padding: 6rem 0;
+    background-color: #fafafa;
+  }
+  .about-bottom {
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    text-align: left;
+    align-items: center;
+    gap: 2rem;
+  }
 
-@media (max-width: 600px) {
+  .about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+  }
+  .about-right {
+    width: 80%;
+  }
+  .project {
+    flex-direction: column;
+  }
+  .project img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .project-detail {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-detail h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .project-detail p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
   .socials {
     display: none;
   }
+
   main h1 {
     font-size: 6vw;
   }
@@ -671,6 +617,45 @@ footer p a {
   color: white;
 }
 @media (max-width: 900px) {
+  .about-left button {
+    width: 50%;
+    background-color: #7843e9;
+    border: none;
+    padding: 2vh 4vw;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+  }
+  .about-right {
+    width: 80%;
+  }
+  .about {
+    padding: 6rem 0;
+    background-color: #fafafa;
+  }
+  .about-bottom {
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    text-align: left;
+    gap: 2rem;
+    align-items: center;
+  }
+  .about-right span {
+    padding: 0.25rem 0.5rem;
+    background: rgba(153, 153, 153, 0.2);
+    color: #666;
+    border-radius: 5px;
+    font-weight: 600;
+  }
   .socials ul {
     box-shadow: 1px 1px 3px 1px #3333;
     display: flex;
