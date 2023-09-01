@@ -131,12 +131,11 @@ ul {
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: end ;
+    align-items: end;
     gap: 1.5rem;
     padding: 3vw 3vw;
     width: 100%;
     text-transform: uppercase;
-    color: white;
   }
 
   .small_screen li button {
@@ -213,7 +212,6 @@ ul {
   flex-direction: column;
   gap: 2rem;
   width: 45%;
-  
 }
 .about-right {
   width: 45%;
@@ -481,6 +479,7 @@ img {
     padding: 2vh 10vw;
     border-radius: 5px;
   }
+ 
 }
 .contact {
   background: linear-gradient(

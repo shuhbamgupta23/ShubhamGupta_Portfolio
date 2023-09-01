@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Profile from "../../images/profile_pic.png";
 import "./style.css";
 import { motion } from "framer-motion";
@@ -11,6 +11,8 @@ import ECOMMERCE from "../../images/ecommerce.jpeg";
 import emailjs from "@emailjs/browser";
 import { useAlert } from "react-alert";
 const NavBar = () => {
+  const [hasScrolled, setHasScrolled] = useState(0);
+
   const [active, setActive] = useState(false);
   const [inputValue, setInputValue] = useState({
     user_name: "",
@@ -79,7 +81,24 @@ const NavBar = () => {
   const about = useRef(null);
   const project = useRef(null);
   const contact = useRef(null);
+  useEffect(() => {
+    if (active) {
+      hamburger_close.current.classList.remove("active");
+      hamburger.current.classList.add("active");
+      small_screen.current.classList.remove("active");
+    }
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setHasScrolled(window.scrollY);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [hasScrolled]); //
   return (
     <>
       <div className="nav_main">
