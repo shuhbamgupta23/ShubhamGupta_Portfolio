@@ -36,7 +36,7 @@ const NavBar = () => {
 
     emailjs
       .sendForm(
-        "service_8bt4qb9",
+        "service_8pn3fwk",
         "template_ibog4ib",
         form.current,
         "rrF5iIqQm0G7kBEMo"
