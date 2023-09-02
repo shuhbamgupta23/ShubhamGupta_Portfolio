@@ -15,6 +15,7 @@ const NavBar = () => {
 
   const [active, setActive] = useState(false);
   const [inputValue, setInputValue] = useState({
+    subject: "",
     user_name: "",
     user_email: "",
     message: "",
@@ -34,7 +35,7 @@ const NavBar = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setInputValue({ user_name: "", user_email: "", message: "" });
+    setInputValue({ subject: "", user_name: "", user_email: "", message: "" });
 
     emailjs
       .sendForm(
@@ -410,6 +411,15 @@ const NavBar = () => {
         </header>
         <div className="contact-bottom">
           <form ref={form} onSubmit={sendEmail}>
+            <label>Subject</label>
+            <input
+              onChange={(e) => handleChange(e)}
+              type="text"
+              required
+              name="subject"
+              placeholder="Enter Your Subject"
+              value={inputValue.subject}
+            />
             <label>Name</label>
             <input
               onChange={(e) => handleChange(e)}

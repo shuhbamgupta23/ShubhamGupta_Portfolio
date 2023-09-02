@@ -479,7 +479,7 @@ img {
     padding: 2vh 10vw;
     border-radius: 5px;
   }
- 
+
 }
 .contact {
   background: linear-gradient(
@@ -667,8 +667,8 @@ footer p a {
   }
   form {
     width: 90%;
-
-    padding: 3rem 2rem;
+    gap:1rem;
+    padding: 1.5rem 2rem;
   }
 
   form input {
