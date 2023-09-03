@@ -306,7 +306,8 @@ const NavBar = () => {
         </header>
         <div className="project-bottom">
           <div className="project">
-            <img src={MOVIES} alt="movies"></img>
+            <img src={MOVIES} alt="movies" className="stream__thumbnail"></img>
+
             <div className="project-detail">
               <h1>Movies Application</h1>
               <p>
