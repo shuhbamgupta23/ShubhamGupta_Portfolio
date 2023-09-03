@@ -3,10 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
+  max-width:100%;
 }
 i {
   color: black;
 }
+
+
 
 .nav_main {
   position: sticky;
@@ -111,9 +114,13 @@ ul {
   letter-spacing: 1px;
 }
 
+.icons {
+  display: none;
+}
+
 @media (max-width: 800px) {
   .small_screen {
-    box-shadow: 0.25px 0.25px 5px 0.5px #c1bfbf;
+    box-shadow: 0.25px 0.25px 5px 1px #605c5c;
   }
   nav {
     padding: 1rem 1rem;
@@ -145,26 +152,11 @@ ul {
     border: none;
     background-color: transparent;
     text-transform: uppercase;
+    margin-right: 0.5rem;
   }
 
-  .hamburger.active {
+  .hamburger-react {
     display: block;
-    width: 3vh;
-    height: 3vh;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .hamburger_close.active {
-    display: block;
-    width: 2vh;
-    height: 2vh;
-  }
-  .icons i {
-    padding: 0;
-    margin: 0;
   }
 }
 
@@ -407,7 +399,17 @@ img {
   max-width: 100%;
 }
 
+.hamburger-react {
+  display: none;
+}
+
 @media (max-width: 760px) {
+  .hamburger-react {
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+
   .about-left button {
     width: 50%;
     background-color: #7843e9;
@@ -479,7 +481,6 @@ img {
     padding: 2vh 10vw;
     border-radius: 5px;
   }
-
 }
 .contact {
   background: linear-gradient(
@@ -615,6 +616,46 @@ footer p a {
   color: white;
 }
 @media (max-width: 900px) {
+  .small_screen {
+
+    box-shadow: 0.25px 0.25px 5px 1px #605c5c;
+  }
+  nav {
+    padding: 1rem 1rem;
+  }
+  .nav_right li {
+    display: none;
+  }
+
+  .small_screen {
+    display: none;
+  }
+
+  .small_screen.active {
+    background-color: #7843e9;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1.5rem;
+    padding: 3vw 3vw;
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  .small_screen li button {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+  }
+
+  .hamburger-react {
+    display: block;
+  }
   .about-left button {
     width: 50%;
     background-color: #7843e9;
@@ -667,7 +708,7 @@ footer p a {
   }
   form {
     width: 90%;
-    gap:1rem;
+    gap: 1rem;
     padding: 1.5rem 2rem;
   }
 
@@ -712,5 +753,8 @@ footer p a {
     width: 100%;
     height: 0.5px;
     background-color: #333;
+  }
+  .hamburger-react {
+    display: block;
   }
 }

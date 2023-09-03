@@ -10,6 +10,8 @@ import EXCEL from "../../images/excel.jpeg";
 import ECOMMERCE from "../../images/ecommerce.jpeg";
 import emailjs from "@emailjs/browser";
 import { useAlert } from "react-alert";
+
+import { Squash } from "hamburger-react";
 const NavBar = () => {
   const [hasScrolled, setHasScrolled] = useState(0);
 
@@ -26,8 +28,6 @@ const NavBar = () => {
   };
 
   const small_screen = useRef(null);
-  const hamburger = useRef(null);
-  const hamburger_close = useRef(null);
   const scrollToComponent = (currEle) => {
     currEle.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -66,12 +66,8 @@ const NavBar = () => {
 
   const handleClick = () => {
     if (active) {
-      hamburger_close.current.classList.remove("active");
-      hamburger.current.classList.add("active");
       small_screen.current.classList.remove("active");
     } else {
-      hamburger_close.current.classList.add("active");
-      hamburger.current.classList.remove("active");
       small_screen.current.classList.add("active");
     }
 
@@ -84,9 +80,8 @@ const NavBar = () => {
   const contact = useRef(null);
   useEffect(() => {
     if (active) {
-      hamburger_close.current.classList.remove("active");
-      hamburger.current.classList.add("active");
       small_screen.current.classList.remove("active");
+      setActive(!active);
     }
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -167,21 +162,9 @@ const NavBar = () => {
                 <button>Download Resume</button>
               </a>
             </motion.li>
-            <div className="icons">
-              <i
-                className="material-icons hamburger active"
-                ref={hamburger}
-                onClick={handleClick}
-              >
-                menu
-              </i>
-              <i
-                className="fa-solid fa-xmark hamburger_close"
-                ref={hamburger_close}
-                onClick={handleClick}
-              ></i>
-            </div>
           </ul>
+
+          <Squash toggled={active} toggle={handleClick} size={20} />
         </nav>
         <ul className="small_screen" ref={small_screen}>
           <li>
