@@ -286,11 +286,12 @@ const NavBar = () => {
               <span>TypeScript</span>
               <span>NextJs</span>
               <span>BootStrap</span>
+              <span>TanStack Query</span>
               <span>Git</span>
               <span>Node</span>
               <span>Express</span>
               <span>Java</span>
-              <span>Redux</span>
+              <span>Redux-ToolKit</span>
             </div>
           </div>
         </div>
